@@ -1,22 +1,14 @@
-﻿List<string> alphabet = new List<string> {"A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "Æ", "Ø", "Å"};
-
+﻿Console.WriteLine("Type your message here");
 string userInput = Console.ReadLine();
-List<string> originalInput = new List<string>();
 
-for (int i = 0; i < userInput.Length; i++)
-{
-    originalInput.Add(userInput[i].ToString().ToUpper());
-}
+string encryptedMessage = Encrypter.Encrypt.Encipher(userInput);
+string decryptedMessage = Encrypter.Encrypt.Decipher(encryptedMessage);
 
-List<string> encrypt = new List<string>();
-for (int i = 0; i < originalInput.Count; i++)
-{
-    int getOriginalInputCharPosition = alphabet.IndexOf(originalInput[i]);
+Console.ForegroundColor = ConsoleColor.Red;
+Console.WriteLine("\nEncrypted text: \n" + encryptedMessage);
 
-    if (getOriginalInputCharPosition != alphabet.Count);
-    {
-        int getNewInputCharPosition = getOriginalInputCharPosition+1;
-    }
+Console.ForegroundColor = ConsoleColor.Green;
+Console.WriteLine("\nDecrypted text: \n" + decryptedMessage);
 
-    Console.WriteLine(getOriginalInputCharPosition);
-}
+Console.ForegroundColor= ConsoleColor.White;
+Console.ReadKey();
