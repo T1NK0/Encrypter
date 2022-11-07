@@ -15,7 +15,7 @@ for (int i = 0; i < originalInput.Count; i++)
 
     if (getOriginalInputCharPosition != alphabet.Count);
     {
-        int getNewInputCharPosition = alphabet + 1;
+        int getNewInputCharPosition = getOriginalInputCharPosition+1;
     }
 
     Console.WriteLine(getOriginalInputCharPosition);
